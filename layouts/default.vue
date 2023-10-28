@@ -11,7 +11,7 @@ function goIns() {
             class="w-full flex justify-between items-center h-16 bg-gradient-to-br from-violet-500 to-rose-300 text-white px-4"
         >
             <h1 class="font-bold text-3xl flex items-center gap-2">
-                Nore
+                Anita
                 <!-- <div class="heart-small mt-2"></div> -->
             </h1>
             <label
@@ -34,13 +34,13 @@ function goIns() {
                         @click="goIns"
                         class="hover:bg-gray-200/40 w-full text-center rounded py-1 text-lg hover:text-rose-500 duration-200 flex items-center justify-center"
                     >
-                        Nore
+                        Anita
                     </li>
                     <li
                         @click="goIns"
                         class="hover:bg-gray-200/40 w-full text-center rounded py-1 text-lg hover:text-rose-500 duration-200 flex items-center justify-center"
                     >
-                        Nore
+                        Anita
                     </li>
                     <li class="flex-1 flex justify-center items-center w-full rounded duration-200">
                         <!-- <svg
@@ -75,21 +75,21 @@ function goIns() {
                         @click="goIns"
                         class="hover:bg-gray-200/40 w-full text-center rounded py-1 text-lg hover:text-rose-500 duration-200 flex items-center justify-center"
                     >
-                        Nore
+                        Anita
                     </li>
                     <li
                         @click="goIns"
                         class="hover:bg-gray-200/40 w-full text-center rounded py-1 text-lg hover:text-rose-500 duration-200 flex items-center justify-center"
                     >
-                        Nore
+                        Anita
                     </li>
                 </ul>
             </label>
 
             <ul class="hidden md:flex justify-center items-center gap-4">
-                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Nore</li>
-                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Nore</li>
-                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Nore</li>
+                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Anita</li>
+                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Anita</li>
+                <li class="hover:cursor-pointer px-4 py-1.5 hover:bg-gray-200/40 rounded duration-200">Anita</li>
             </ul>
         </header>
 
