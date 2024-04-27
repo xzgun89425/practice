@@ -1,4 +1,18 @@
 <script setup>
+const events = ref('touchstart');
+onMounted(() => {
+    window.addEventListener('resize', handleResize);
+    handleResize();
+});
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
+});
+function handleResize() {
+    const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+        window.navigator.userAgent.toLowerCase()
+    );
+    events.value = isMobile ? 'touchstart' : 'click';
+}
 const playerData = reactive({
     memory: {
         O: [],
@@ -155,8 +169,7 @@ function reset() {
                 }"
                 v-for="item in playerData.grids"
                 :key="item.id"
-                @touchend="chooseItem(item)"
-                @click="chooseItem(item)"
+                v-on:[events]="chooseItem(item)"
             >
                 <div
                     v-show="item.mark == ''"
