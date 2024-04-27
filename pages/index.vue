@@ -4,7 +4,7 @@ const games = reactive([{ id: 20240427001, name: 'OOXX plus', path: '/ooxx' }]);
 
 <template>
     <div class="w-full bg-gradient-to-br from-zinc-900 to-gray-700 h-screen p-4">
-        <div class="grid grid-cols-6 gap-4">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
             <NuxtLink
                 v-for="item in games"
                 :key="item.id"

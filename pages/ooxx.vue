@@ -43,7 +43,6 @@ function chooseItem(item) {
     } else {
         playerData.nowPlayer = 'O';
     }
-    console.log(playerData.count[m]);
 }
 function checkWin() {
     let count = 0;
@@ -112,7 +111,7 @@ function reset() {
 <template>
     <div
         v-show="playerData.winner"
-        class="w-screen h-screen flex justify-center items-center bg-zinc-800/90 fixed z-10 top-0 left-0"
+        class="w-screen h-[100dvh] flex justify-center items-center bg-zinc-800/90 fixed z-10 top-0 left-0"
     >
         <div class="w-[300px]">
             <h1
@@ -134,10 +133,10 @@ function reset() {
             </button>
         </div>
     </div>
-    <div class="flex flex-col justify-center items-center h-screen bg-gradient-to-br from-zinc-900 to-gray-700">
+    <div class="flex flex-col justify-center items-center h-[100dvh] bg-gradient-to-br from-zinc-900 to-gray-700">
         <h1
             v-show="playerData.winner == ''"
-            class="fixed top-0 w-[600px] text-center font-bold mt-8 text-4xl"
+            class="fixed top-0 w-[600px] text-center font-bold mt-4 lg:mt-8 text-2xl lg:text-4xl"
             :class="{
                 'text-rose-400': playerData.nowPlayer == 'O',
                 'text-teal-500': playerData.nowPlayer == 'X',
@@ -146,16 +145,17 @@ function reset() {
             玩家
             {{ playerData.nowPlayer }}
         </h1>
-        <div class="grid grid-cols-3 w-[600px] h-[600px] rounded-md overflow-hidden">
+        <div class="grid grid-cols-3 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] rounded-md overflow-hidden">
             <button
                 :disabled="item.mark !== ''"
-                class="col-span-1 group bg-transparent disabled:hover:bg-transparent border-gray-100 w-[200px] h-[200px] flex justify-center items-center"
+                class="col-span-1 group bg-transparent disabled:hover:bg-transparent border-gray-100 w-[100px] lg:w-[200px] h-[100px] lg:h-[200px] flex justify-center items-center"
                 :class="{
-                    'border-b-8': item.id <= 6,
-                    'border-r-8': item.id % 3 !== 0,
+                    'border-b-4 lg:border-b-8': item.id <= 6,
+                    'border-r-4 lg:border-r-8': item.id % 3 !== 0,
                 }"
                 v-for="item in playerData.grids"
                 :key="item.id"
+                @touchend="chooseItem(item)"
                 @click="chooseItem(item)"
             >
                 <div
