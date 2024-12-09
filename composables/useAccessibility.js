@@ -1,7 +1,7 @@
 const domMemo = ref([]);
 let domIndex = 0;
 export const checkElements = () => {
-    domMemo.value = []
+    domMemo.value = [];
     // Recursive function
     function traverseBody(node) {
         if (node.childNodes.length) {
@@ -30,8 +30,8 @@ export const checkElements = () => {
             domMemo.value = domMemo.value.filter(onlyUnique);
         }
     });
-    console.log(domMemo.value);
-}
+    // console.log(domMemo.value);
+};
 
 // ===== 文字放大
 const sizeIndex = ref(1);
@@ -49,7 +49,7 @@ export const biggerText = (Index) => {
     if (Index !== null && Index !== undefined) {
         sizeIndex.value = Index;
     } else {
-        sizeIndex.value = 1
+        sizeIndex.value = 1;
     }
     // console.log(Index !== null && Index !== undefined);
     console.log(fontSizeMemo);
@@ -57,4 +57,4 @@ export const biggerText = (Index) => {
         item.style.fontSize = `${fontSizeMemo[idx] * sizeArray[sizeIndex.value]}px`;
         console.log(item);
     });
-}
+};

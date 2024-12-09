@@ -16,6 +16,7 @@ onUpdated(async () => {
         <button class="p-2 mx-2 bg-blue-500 text-white" @click="biggerText(1)">normal</button>
         <button class="p-2 mx-2 bg-blue-500 text-white" @click="biggerText(2)">big</button>
     </div> -->
+    <!-- <Divination /> -->
     <slot />
 </template>
 
